@@ -1,0 +1,165 @@
+/* Recipe */
+html{
+  scroll-behavior: smooth;
+}
+body{
+    color: black;
+}
+
+.recipes{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.recipe-container{
+    max-width: 80vw; 
+    margin: 0 auto; 
+    display: grid;
+    background-color: rgba(127, 91, 6, 0.47);
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+    gap: 20px;
+    border-radius: 20px 0 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    margin-bottom: 40px;
+  }
+  #boba.recipe-container{
+    background-color: rgba(188, 115, 127, 0.664);
+  }
+  #strawberry.recipe-container{
+    background-color: 	rgba(224, 134, 134, 0.781)
+  }
+  #coffee.recipe-container{
+    background-color: rgb(111, 78, 55);
+  }
+  #lemonade.recipe-container{
+    background-color: #f3cb19a8;
+  }
+  .recipe-texts{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 14px;
+      padding: 40px 10px 0 10px;
+  }
+  .recipe-container img{
+    width: 400px;
+    height: 500px; 
+    border-radius: 20px 0 0px 20px;
+  }
+  .recipe-container img:hover{
+    transform: scale(1.005);
+    transition: 0.4s ease-in-out;
+  }
+
+  @media (max-width: 768px) {
+    .recipe-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .recipe-texts {
+        padding: 20px;
+        font-size: 12px;
+}
+  }
+@media (max-width: 480px) {
+    .recipe-texts {
+        padding: 10px;
+        font-size: 11px; /* Further reduce font size */
+    }
+}
+  
+
+
+
+.box {
+    width: 100%;
+    height: 100vh;
+    border-radius: 5px;
+    box-shadow: 0 2px 30px rgba(black, .2);
+    background: lighten(#f0f4c3, 10%);
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .wave {
+    opacity: .4;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    background:  rgba(188, 115, 127, 0.664);
+    width: 500px;
+    height: 500px;
+    margin-left: -50px;
+    margin-top: -250px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+  }
+  
+  .wave.-three {
+    animation: drift 5000ms infinite linear;
+  }
+  
+  .wave.-two {
+    animation: drift 7000ms infinite linear;
+    opacity: .1;
+    background: rgba(127, 91, 6, 0.47);
+  }
+  
+  .box:after {
+    content: '';
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(rgba(188, 115, 127, 0.664), 1), rgba(rgba(127, 91, 6, 0.47), 0) 80%, rgba(white, .5));
+    z-index: 11;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  @keyframes drift {
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
+  }
+
+
+  .falling-ingredient {
+    position: absolute;
+    top: -100px;
+    animation: fall 9s linear infinite;
+    opacity: 1;
+}
+
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Different positions for ingredients to start */
+.ingredient1 { left: 10%; animation-delay: 1s; }
+.ingredient2 { left: 30%; animation-delay: 3s; }
+.ingredient3 { left: 50%; animation-delay: 2s; }
+.ingredient4 { left: 70%; animation-delay: 4s; }
+.ingredient5 { left: 90%; animation-delay: 5s; }
+.ingredient6 { left: 80%; animation-delay: 6s; }
+
+.recipe-texts img{
+  width: 20px;
+  height: 20px;
+}
+
+
+nav ul li{
+
+}
